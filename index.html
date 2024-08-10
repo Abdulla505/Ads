@@ -3,127 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ا</title>
+    <title>مطعمنا - الصفحة الرئيسية</title>
     <style>
-    /* Reset CSS */
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-    
-    /* Global Styles */
-    body {
-    font-family: Arial, sans-serif;
-    direction: rtl; /* Right-to-left text direction */
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 20px;
-    }
-    
-    header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    }
-    
-    header h1 {
-    margin-bottom: 10px;
-    }
-    
-    nav ul {
-    list-style-type: none;
-    margin-top: 10px;
-    }
-    
-    nav ul li {
-    display: inline;
-    margin-right: 20px;
-    }
-    
-    nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    }
-    
-    nav ul li a:hover {
-    text-decoration: underline;
-    }
-    
-    section {
-    background-color: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    
-    section h2 {
-    color: #333;
-    margin-bottom: 10px;
-    }
-    
-    footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    }
-    
+        
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+        
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffc107;
+            color: #333;
+            font-family: "IBM Plex Sans Arabic", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .navbar {
+            background-color: #ffc107;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            
+        }
+
+        .navbar a:hover {
+            color: #ffffff56;
+            border: solid 1px #ffffff56;
+            padding:2px;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin-top: 0px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            
+        }
+
+        .slider-nav button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+        font-size: 15px; /* تكبير حجم الخط ليكون أكثر بروزًا */
+        margin-bottom: 20px;
+        color: #fff; /* اللون الأبيض للنص */
+        background-color: rgba(255, 255, 255, 0.3); /* خلفية نصف شفافة */
+        border-radius: 50px; /* تعديل زاوية الحدود لتكون أكثر نعومة */
+        padding: 15px 30px; /* إضافة مساحة داخلية لجعل النص أكثر بروزًا */
+        text-align: center; /* توسيط النص داخل العنوان */
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* إضافة ظل أكبر وأكثر نعومة */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* إضافة تأثير التحول لتفاعل المستخدم */
+        }
+        
+        .main-content h1:hover {
+        transform: scale(1.05); /* تكبير العنصر قليلاً عند التمرير فوقه */
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.7); /* تعميق الظل عند التمرير */
+        }
+        
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: calc(43% - 5px);
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .product h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-size: 16px;
+            padding: 0 10px;
+            color: #777;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product button {
+            background-color: #ff3b30;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 15px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .product button:hover {
+            background-color: #e82c2a;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+        
+        
+        
+        /* ملف styles.css */
+        
+        
+        
+        .product-grid1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        }
+        
+        .product-card1 {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        }
+        
+        .product-card1 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        }
+        
+        .product-card1 h2 {
+        font-size: 22px;
+        margin: 15px 0;
+        color: #333;
+        }
+        
+        .product-card1 p {
+        font-size: 16px;
+        color: #777;
+        padding: 0 15px;
+        margin-bottom: 20px;
+        }
+        
+        .product-card1 button {
+        background-color: #ff3b30;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        }
+        
+        .product-card1 button:hover {
+        background-color: #e82c2a;
+        }
+        
+        .product-card1:hover {
+        transform: translateY(-5px);
+        }
+        
+        
+        
+        /* ملف styles.css */
+        
+        /* باقي التنسيقات هنا */
+        
+        .social-media {
+        text-align: center;
+        padding: 30px 0;
+        background-color: #f4f4f4;
+        color: #333;
+        border-top: 2px solid #ff3b30;
+        border-bottom: 2px solid #ff3b30;
+        margin-top: 40px;
+        }
+        
+        .social-media h2 {
+        font-size: 15px;
+        margin-bottom: 20px;
+        color: #ff3b30;
+        font-weight: bold;
+        }
+        
+        .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        }
+        
+        .social-link img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .social-link img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        
+        
+        
     </style>
-    
 </head>
 <body>
-  <!------
-    <script type="text/javascript">
-        // JavaScript to redirect to Google
-        window.location.href = "https://coofoagleeh.com/4/7852647";
-    </script>
----->
-    <header>
-        <h1>شركة MoneFortag للإعلانات المرآيا</h1>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="https://www.mcdonalds.com/content/dam/sites/ArabiaGWS/arabic/nfl/logo/McDonalds_Logo.png" alt="Logo">
+        </div>
         <nav>
-            <ul>
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#clients">عملاؤنا</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
+            <a href="#">الرئيسية</a>
+            <a href="#">قائمة الطعام</a>
+            <a href="#">الفروع</a>
+           
         </nav>
     </header>
-    
-    <section id="about">
-        <h2>من نحن</h2>
-        <p>نحن في شركة MoneFortag نقدم حلولاً متقدمة في مجال الإعلانات المرآيا، تساعد الشركات على تحقيق أهدافها الإعلانية بطرق مبتكرة وفعالة.</p>
-        <!-- Add more detailed text here -->
+
+    <section class="slider">
+        <div class="slides">
+            <img src="https://s7d1.scene7.com/is/image/mcdonalds/1PUB_bestburger_trendingnow:publication-column-mobile?resmode=sharp2" alt="Slide 1">
+            <img src="https://s7d1.scene7.com/is/image/mcdonalds/5dollar_MealDeal_COM_1PUB_Meal:publication-column-mobile?resmode=sharp2" alt="Slide 2">
+            <img src="https://s7d1.scene7.com/is/image/mcdonalds/1PUB_2024QPC_KKBSMcFlurry_2236x1040:publication-column-mobile?resmode=sharp2" alt="Slide 3">
+        </div>
+        <div class="slider-nav">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
     </section>
-    
-    <section id="services">
-        <h2>خدماتنا</h2>
-        <p>تعتمد خدماتنا على التحليلات الدقيقة والابتكار التكنولوجي لتحسين أداء حملاتكم الإعلانية وتحقيق أفضل عوائد الاستثمار.</p>
-        <!-- Add more detailed text here -->
+
+    <section class="main-content">
+        <h1>أفضل الوجبات لدينا</h1>
+        <div class="products">
+            <div class="product">
+                <img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-Chikker-Meal-ry-0724:nutrition-calculator-tile" alt="وجبة ماك كبيرة">
+                <h2>وجبة ماك كبيرة</h2>
+                <p>لذيذ جميل وكافي لجميع افراد العائلة</p>
+                <button onclick="order()">اطلب الآن</button>
+            </div>
+            <div class="product">
+                <img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-McFlurry-Daim-ry-0624:nutrition-calculator-tile" alt="ماك تشيكن">
+                <h2>ماك تشيكن</h2>
+                <p>ليس مجرد بطاطس بليحتوي على الشوكولاتة</p>
+                <button onclick="order()">اطلب الآن</button>
+            </div>
+            <div class="product">
+                <img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-Mini-Asian-Meal-ry-0724:nutrition-calculator-tile" alt="بطاطس مقلية">
+                <h2>بطاطس مقلية</h2>
+                <p>بطاطس مقلية مع برقر وعصير مجانا</p>
+                <button onclick="order()">اطلب الآن</button>
+            </div>
+        </div>
+        <script>
+        function order() {
+        window.location.href = 'https://maps.app.goo.gl/rrebjTadmS4EaPmLA';
+        }
+        </script>
+        
+        
+        
+        
+        <div class="container">
+        <h1>قائمة الطعام</h1>
+        <div class="product-grid1">
+        <div class="product-card1">
+        <img src="https://s7d1.scene7.com/is/image/mcdonalds/mcd-bigmac-jd-1223:nutrition-calculator-tile?wid=822&hei=822&dpr=off" alt="بيج ماك">
+        <h2>بيج ماك</h2>
+        <p>برجر لحم بقري طازج مع خس، جبن، بصل، و صلصة ماك المميزة.</p>
+        <button onclick="order('بيج ماك')">اطلب الآن</button>
+        </div>
+        <!-- باقي المنتجات هنا -->
+        </div>
+        </div>
+        
+        
+        <div class="social-media">
+        <h2>تابعنا على وسائل التواصل الاجتماعي</h2>
+        <div class="social-links">
+        <a href="https://www.facebook.com/McDonalds" target="_blank" class="social-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/McDonalds" target="_blank" class="social-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/mcdonalds" target="_blank" class="social-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/user/McDonalds" target="_blank" class="social-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+        </a>
+        </div>
+        </div>
     </section>
-    
-    <section id="clients">
-        <h2>عملاؤنا</h2>
-        <p>نفخر بخدمة مجموعة واسعة من العملاء في مختلف الصناعات، حيث ساهمنا في نجاح حملاتهم الإعلانية وتعزيز هويتهم البصرية.</p>
-        <!-- Add more detailed text here -->
-    </section>
-    
-    <section id="contact">
-        <h2>اتصل بنا</h2>
-        <p>للمزيد من المعلومات حول خدماتنا أو لطلب استشارة مجانية، يرجى الاتصال بنا عبر البريد الإلكتروني أو الهاتف.</p>
-        <address>
-            البريد الإلكتروني: <a href="mailto:info@monetag.com">info@monetag.com</a><br>
-            هاتف: 96689345478
-        </address>
-    </section>
-    
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2024 شركة MoneFortag</p>
+
+    <footer class="footer">
+        <p>&copy; 2024 مطعمنا. جميع الحقوق محفوظة.</p>
+        <p>Franchising in <a href="https://maps.app.goo.gl/rrebjTadmS4EaPmLA" >Abha</a></p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.querySelectorAll('.slides img');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function prevSlide() {
+            slideIndex -= 2;
+            if (slideIndex < 0) {
+                slideIndex = document.querySelectorAll('.slides img').length - 2;
+            }
+            showSlides();
+        }
+
+        function nextSlide() {
+            showSlides();
+        }
+
+        showSlides();
+    </script>
 </body>
 </html>
+
+
